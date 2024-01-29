@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name":"Chocolate party",
+        "price": 59.99,
+        "image": "Images/product1.webp"
+    },
+    {
+        "id": 2,
+        "name":"rainbow magic",
+        "price": 59.99,
+        "image": "Images/product-2.webp"
+    },
+    {
+        "id": 3,
+        "name":"chocoMania",
+        "price": 49.99,
+        "image": "Images/product-3.webp"
+    },
+    {
+        "id": 4,
+        "name":"white boi",
+        "price": 45.99,
+        "image": "Images/product-4.jpg"
+    },
+    {
+        "id": 5,
+        "name":"ocean madness",
+        "price": 39.99,
+        "image": "Images/product-5.jpg"
+    },
+    {
+        "id": 6,
+        "name":"leaking blue",
+        "price": 39.99,
+        "image": "Images/product-6.jpg"
+    },
+    {
+        "id": 7,
+        "name":"Pink seed",
+        "price": 39.99,
+        "image": "Images/product-7.jpg"
+    },
+    {
+        "id": 8,
+        "name":"leaking brown",
+        "price": 39.99,
+        "image": "Images/product-8.jpg"
+    },
+    {
+        "id": 9,
+        "name":"M&M galore",
+        "price": 45.99,
+        "image": "Images/product-9.jpg"
+    },
+    {
+        "id": 10,
+        "name":"uniocorn body",
+        "price": 45.99,
+        "image": "Images/product-10.jpeg"
+    },
+    {
+        "id": 11,
+        "name":"strawberry stacks",
+        "price": 45.99,
+        "image": "Images/product-11.jpg"
+    },
+    {
+        "id": 12,
+        "name":"caramel land",
+        "price": 39.99,
+        "image": "Images/product-12.jpg"
+    }
+]
