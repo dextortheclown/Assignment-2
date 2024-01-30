@@ -4,9 +4,9 @@
 /* Global CSS variables */
 :root {
   /* custom properties*/
-  --primary-color: #c98d83;
-  --secondary: #783b31;
-  --bg: #dba881;
+  --primary-color: #700996;
+  --secondary: #361239;
+  --bg: #915abc;
   --black: #000;
   --white: #fff;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -429,12 +429,16 @@ section {
   background: url(../Images/banner-bg.jpg);
   background-size: cover !important;
   background-position: center !important;
+  display: flex;
+  justify-content: center;
 }
 
 .banner img {
-  margin-top: 3rem;
-  height: 100%;
-  width: 100%;
+  margin-top: 3rem; 
+  height: auto;
+  width: 60%;
+  align-self: center;
+  
 }
 
 /* banner end */
@@ -1031,4 +1035,16 @@ body.showCart .container {
   .home .slide .content h3 {
     font-size: 3rem;
   }
+}
+
+/* add to cart hover */
+.addCart{
+  background-color: #f0f0f0;
+  
+}
+.addCart:hover{
+background-color: #1a1212;
+color: #000;
+transform: scale(1.1);
+
 }

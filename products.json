@@ -1,74 +1,74 @@
 [
     {
         "id": 1,
-        "name":"Chocolate party",
+        "name":"Signature Macarons",
         "price": 59.99,
-        "image": "Images/product1.webp"
+        "image": "Images/MenuItem1.png"
     },
     {
         "id": 2,
-        "name":"rainbow magic",
-        "price": 59.99,
-        "image": "Images/product-2.webp"
+        "name":"Dark Latte",
+        "price": 5.99,
+        "image": "Images/MenuItem2.png"
     },
     {
         "id": 3,
-        "name":"chocoMania",
-        "price": 49.99,
-        "image": "Images/product-3.webp"
+        "name":"Rainbow Frappe",
+        "price": 9.99,
+        "image": "Images/MenuItem3.png"
     },
     {
         "id": 4,
-        "name":"white boi",
-        "price": 45.99,
-        "image": "Images/product-4.jpg"
+        "name":"BTSandwich",
+        "price": 10.99,
+        "image": "Images/MenuItem4.png"
     },
     {
         "id": 5,
-        "name":"ocean madness",
-        "price": 39.99,
-        "image": "Images/product-5.jpg"
+        "name":"BaggueTS",
+        "price": 10.99,
+        "image": "Images/MenuItem5.png"
     },
     {
         "id": 6,
-        "name":"leaking blue",
-        "price": 39.99,
-        "image": "Images/product-6.jpg"
+        "name":"Signature Frappucino",
+        "price": 9.99,
+        "image": "Images/MenuItem6.png"
     },
     {
         "id": 7,
-        "name":"Pink seed",
-        "price": 39.99,
-        "image": "Images/product-7.jpg"
+        "name":"Cooky Croissant",
+        "price": 9.99,
+        "image": "Images/MenuItem7.png"
     },
     {
         "id": 8,
-        "name":"leaking brown",
-        "price": 39.99,
-        "image": "Images/product-8.jpg"
+        "name":"Koya latte",
+        "price": 9.99,
+        "image": "Images/MenuItem8.png"
     },
     {
         "id": 9,
-        "name":"M&M galore",
-        "price": 45.99,
-        "image": "Images/product-9.jpg"
+        "name":"Matcha Latte",
+        "price": 5.99,
+        "image": "Images/MenuItem9.png"
     },
     {
         "id": 10,
-        "name":"uniocorn body",
-        "price": 45.99,
-        "image": "Images/product-10.jpeg"
+        "name":"Matcha Frappe",
+        "price": 9.99,
+        "image": "Images/MenuItem10.png"
     },
     {
         "id": 11,
-        "name":"strawberry stacks",
+        "name":"Rainbow BTS",
         "price": 45.99,
-        "image": "Images/product-11.jpg"
+        "image": "Images/MenuItem11.png"
     },
     {
         "id": 12,
-        "name":"caramel land",
-        "price": 39.99,
-        "image": "Images/product-12.jpg"
+        "name":"Cheesy Wonders",
+        "price": 6.99,
+        "image": "Images/MenuItem12.png"
     }
 ]
