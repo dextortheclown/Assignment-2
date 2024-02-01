@@ -109,9 +109,10 @@ section {
 }
 
 .header .navbar a {
-  font-size: 1.7rem;
+  font-size: 3rem;
   color: var(--black);
-  margin: 0 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .header .navbar a:hover {
