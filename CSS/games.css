@@ -1,69 +1,76 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background: #f7f7f7;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  min-height: 100vh;
+  margin: 0;
+  background: url('../Images/BannerBG.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
   
   #gameContainer {
-    width: 700px;
+    width: 800px;
     height: 400px;
     position: relative;
     border: 2px solid #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     user-select: none; 
     background-color: white; 
-  }
+    margin-bottom: 20px; 
+}
   
-  .target {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: red;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.5); /* Outer and inner shadows for 3D effect */
-    border: 2px solid #900; 
-  }
+.target {
+  width: 50px; 
+  height: 50px; 
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: cover; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
   
   button {
     padding: 10px 20px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow with the game container */
-    border: none; /* Remove default border */
-    background-color: #5c5; /* A pleasing green */
-    color: white; /* White text */
-    border-radius: 5px; /* Rounded corners */
-    font-weight: bold; /* Make the text bold */
-    transition: transform 0.1s; /* Smooth click effect */
-    margin-left: 50px;
-  }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: none; 
+    background-color: rgb(137, 69, 233); 
+    color: white; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: transform 0.1s; 
+    margin-bottom: 10px; 
+}
+
   
   button:hover {
-    background-color: #4a4; /* Darker green on hover */
+    background-color: rgb(143, 77, 198); 
+    transform: scale(1.05);
+    box-shadow: 10px;
   }
   
   button:active {
-    transform: scale(0.98); /* Slight scale down when active/clicked */
+    transform: scale(0.98); 
   }
   #scoreContainer {
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 20px 40px;
+    padding: 10px 40px;
     background: #FFF;
     color: #333;
     font-size: 30px;
     border: 2px solid #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Make sure it's on top of other elements */
+    z-index: 1000; 
   }
   
-  /* Optional: Animation to make the score box slightly bounce when the score updates */
+
   @keyframes bounce {
     0%, 100% {
       transform: translateX(-50%) scale(1);
@@ -73,7 +80,7 @@ body {
     }
   }
   
-  /* Applying the animation to the score container */
+  
   #scoreContainer {
     animation: bounce 0.3s ease;
   } 
