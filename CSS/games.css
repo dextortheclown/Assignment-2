@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f7f7f7;
+  }
+  
+  #gameContainer {
+    width: 700px;
+    height: 400px;
+    position: relative;
+    border: 2px solid #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    user-select: none; 
+    background-color: white; 
+  }
+  
+  .target {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.5); /* Outer and inner shadows for 3D effect */
+    border: 2px solid #900; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow with the game container */
+    border: none; /* Remove default border */
+    background-color: #5c5; /* A pleasing green */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Make the text bold */
+    transition: transform 0.1s; /* Smooth click effect */
+    margin-left: 50px;
+  }
+  
+  button:hover {
+    background-color: #4a4; /* Darker green on hover */
+  }
+  
+  button:active {
+    transform: scale(0.98); /* Slight scale down when active/clicked */
+  }
+  #scoreContainer {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 40px;
+    background: #FFF;
+    color: #333;
+    font-size: 30px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Make sure it's on top of other elements */
+  }
+  
+  /* Optional: Animation to make the score box slightly bounce when the score updates */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.1);
+    }
+  }
+  
+  /* Applying the animation to the score container */
+  #scoreContainer {
+    animation: bounce 0.3s ease;
+  } 

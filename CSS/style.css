@@ -427,7 +427,7 @@ section {
 /* banner */
 
 .banner {
-  background: url(../Images/banner-bg.jpg);
+  background: url(../Images/BannerBG.png);
   background-size: cover !important;
   background-position: center !important;
   display: flex;
@@ -1049,3 +1049,4 @@ color: #000;
 transform: scale(1.1);
 
 }
+
