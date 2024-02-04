@@ -7,7 +7,7 @@
     },
     {
         "id": 2,
-        "name":"Dark Latte",
+        "name":"Dynamite Latte",
         "price": 5.99,
         "image": "Images/MenuItem2.png"
     },
@@ -37,7 +37,7 @@
     },
     {
         "id": 7,
-        "name":"Cooky Croissant",
+        "name":"Butter Croissant",
         "price": 9.99,
         "image": "Images/MenuItem7.png"
     },

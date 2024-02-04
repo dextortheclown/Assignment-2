@@ -109,10 +109,9 @@ section {
 }
 
 .header .navbar a {
-  font-size: 3rem;
+  font-size: 1.7rem;
   color: var(--black);
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin: 0 1rem;
 }
 
 .header .navbar a:hover {
@@ -629,7 +628,7 @@ section {
 }
 
 .aboutus .row .content h3 span {
-  color: var(--secondary);
+  color: var(--primary-color);
 }
 
 .aboutus .row .content p {
@@ -638,6 +637,45 @@ section {
   padding: 1rem 0;
   line-height: 2;
 }
+
+.gmap {
+  padding-bottom: 5rem;
+  border-radius: 8px;
+}
+
+.gmap h1{
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gmap .content a{
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-decoration: underline;
+}
+.gmap .content a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+.gmap .content a:before {
+  content: url('icon-location.svg'); /* Replace with your icon path */
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.gmap .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 
 /* ----------- about page end ---------------*/
 
@@ -1026,6 +1064,9 @@ body.showCart .container {
   }
   .listProduct {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .gmap .content {
+    flex-direction: column;
   }
 }
 @media (max-width: 450px) {
