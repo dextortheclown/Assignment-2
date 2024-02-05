@@ -777,7 +777,7 @@ section {
   font-size: 1.7rem;
   color: var(--secondary);
   text-transform: capitalize;
-  background: var(--bg);
+  background: lightgrey;
   border-radius: 0.5rem;
   width: 49%;
 }
