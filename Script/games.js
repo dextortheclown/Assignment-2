@@ -122,3 +122,26 @@ document.getElementById('BackToHome').addEventListener('click', function() {
 document.getElementById('GameShop').addEventListener('click', function() {
     window.location.href = 'GameShop.html';
 });
+// Lottie loading anim
+function loadLottieAnimation() {
+    lottie.loadAnimation({
+      container: document.getElementById('lottieAnimation'), // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://lottiefiles.com/download/public/66242' 
+    });
+  }
+
+var modal = document.getElementById('instructionModal');
+// close 
+var span = document.getElementsByClassName('close')[0];
+// page loads triggers thsat ting
+window.onload = function() {
+  modal.style.display = "block";
+  loadLottieAnimation();
+}
+// X button
+span.onclick = function() {
+  modal.style.display = "none";
+}
