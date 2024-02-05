@@ -20,21 +20,21 @@ function startGame() {
         clearInterval(spawnTimer);
         document.getElementById('startButton').disabled = false;
         alert(`Congratulations! You have scored ${score} points!`);
-        sendScoreToServer(score); // Send the score after the game is over
+        sendScoreToServer(score); // for sending of the score to my db
     }, gameDuration);
 }
-
+// Spawn target
 function spawnTarget(lifetime) {
     const target = document.createElement('div');
     target.classList.add('target');
     const images = ['Images/Bread.png', 'Images/CafeMug.png'];
-    const randomImage = images[Math.floor(Math.random() * images.length)];
+    const randomImage = images[Math.floor(Math.random() * images.length)]; //  random selectio betw both images
     target.style.backgroundImage = `url('${randomImage}')`;
 
     const gameContainer = document.getElementById('gameContainer');
     const maxX = gameContainer.clientWidth - 30;
     const maxY = gameContainer.clientHeight - 30;
-    const randomX = Math.floor(Math.random() * maxX);
+    const randomX = Math.floor(Math.random() * maxX); // around the contsainer
     const randomY = Math.floor(Math.random() * maxY);
 
     target.style.left = `${randomX}px`;
@@ -48,7 +48,9 @@ function spawnTarget(lifetime) {
         scoreContainer.parentElement.style.animation = 'none';
         setTimeout(() => scoreContainer.parentElement.style.animation = 'bounce 0.3s ease', 10);
     });
+// end of spawn target
 
+//spawning of the bubbles
     gameContainer.appendChild(target);
 
     setTimeout(() => {
@@ -57,11 +59,10 @@ function spawnTarget(lifetime) {
         }
     }, lifetime);
 }
+// end of the spawning of the bubbles
 
+//send score to server
 function sendScoreToServer(scoreToSend) {
-    console.log("Sending score:", scoreToSend);
-    console.log("Type of score:", typeof scoreToSend);
-
     const apiKey = '65c04d45bdc5b284c312d24d'; // Replace with your actual API key
     const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; // Replace with your actual database URL
     
@@ -71,7 +72,7 @@ function sendScoreToServer(scoreToSend) {
             'Content-Type': 'application/json',
             'x-apikey': apiKey
         },
-        body: JSON.stringify({ points: scoreToSend }),
+        body: JSON.stringify({ points: scoreToSend }), // Ensure that this object structure matches your database schema
     })
     .then(response => {
         if (!response.ok) {
@@ -87,9 +88,12 @@ function sendScoreToServer(scoreToSend) {
     });
 }
 
+ // end of send score to server
+
+ // retrieve score
 function retrieveScores() {
-    const apiKey = '65c04d45bdc5b284c312d24d'; // Replace with your actual API key
-    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; // Replace with your actual database URL
+    const apiKey = '65c04d45bdc5b284c312d24d'; 
+    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; 
     
     fetch(databaseURL, {
         method: 'GET',
@@ -103,13 +107,18 @@ function retrieveScores() {
         console.log('Retrieved scores:', data);
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.error('Error:', error); //incase of errors
     });
 }
 
+// end of retrieve
+// for data checking + sum debugging
+
+// back to home page button
 document.getElementById('BackToHome').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
-
-// Call retrieveScores to check the data at the start or for debugging
-// retrieveScores();
+// gameshop button
+document.getElementById('GameShop').addEventListener('click', function() {
+    window.location.href = 'GameShop.html';
+});

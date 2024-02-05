@@ -5,12 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aim Trainer</title>
     <link rel="stylesheet" href="CSS/games.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+<link rel="stylesheet" href="CSS/normalise.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+/>
 <body>
-    <div id="gameContainer"></div>
-    <button id="startButton">Start Game</button>
-    <button id="BackToHome"><a href="index.html">Back To Home Page</a></button>
+    <!--header-->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-cake-candles"></i> BTS Café
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="Games.html">Games</a>
+            <a href="review.html">Review</a>
+        </nav>
+
+        <div class="icons">
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </header>
+    <!--header end-->
+
+    <div class="game-wrapper">
+        <div id="gameContainer"></div>
+        <div class="button-wrapper">
+            <button id="startButton">Start Game</button>
+            <button id="BackToHome"><a href="index.html">Back To Home Page</a></button>
+            <button id="GameShop">Game Shop</button>
+        </div>
+    </div>
+    
     <div id="scoreContainer" style="font-weight: bolder;">SCORE : <span id="score">0</span></div>
+    
     <script src="Script/games.js"></script>
 </body>
 </html>
