@@ -942,6 +942,51 @@ body.showCart .container {
 
 /*------------ Product Page End --------------*/
 
+/*------------ Music Page Start --------------*/
+
+
+.music .heading{
+  padding-top: 5rem;
+}
+
+
+.music .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.music .row .content {
+  flex: 1 1 40rem;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.music .row .content h3 {
+  color: var(--black);
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.music .row .content h3 span {
+  color: var(--primary-color);
+}
+
+.music .row .content p {
+  font-size: 2rem;
+  color: #444;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.music-footer{
+  padding-top: 5rem;
+}
+/*------------ Music Page End --------------*/
+
 /*media queries*/
 @media (max-width: 991px) {
   html {
