@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
     />
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/review.css" />
   </head>
   <body>
     <!--header-->
@@ -52,7 +52,7 @@
     <!-- review -->
 
     <section class="review" id="review">
-      <h1 class="heading">ARMY's <span>Reviews</span></h1>
+      <h1 class="heading">NOTABLE <span>Reviews</span></h1>
     
       <div class="box-container">
         <div class="box">
@@ -144,29 +144,38 @@
     <!-- customer review -->
 
     <section class="customer">
-
-        <h1 class="heading"><span>Leave</span> reviews </h1>
-
-        <div class="row">
-
-            <div class="image">
-                <img src="Images/order.png" alt="">
-            </div>
-
-            <form action="">
-
-                <div class="inputBox">
-                    <input type="text" placeholder="first name">
-                    <input type="text" placeholder="last name">
-                </div>
-
-                <textarea placeholder="your review" name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Submit" class="btn">
-            </form>
-
-        </div>
-
-    </section>
+      <h1 class="heading"> <span>Leave A</span> review! </h1>
+      <div class="row">
+          <div class="image">
+              <!-- Make sure the path to your image is correct -->
+              <img src="Images/order.png" alt="">
+          </div>
+          <form id="add-contact-form">
+              <div class="inputBox">
+                  <input type="text" id="contact-name" placeholder="name" required>
+                  <input type="text" id="contact-outlet" placeholder="outlet" required>
+              </div>
+              <textarea id="contact-msg" placeholder="your review" required></textarea>
+              <input type="submit" value="Submit" class="btn">
+          </form>
+      </div>
+  </section>
+  
+  <!-- Review Display Section -->
+  <div class="container mt-5">
+      <h2>Review Page | Total Reviews: (<span id="total-contacts">0</span>)</h2>
+      <table class="table" id="contact-list">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Outlet</th>
+                  <th>Message</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+  </div>
+  
 
     <!-- customer review end -->
 
@@ -227,5 +236,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
     <script src="Script/scroll.js"></script>
     <script src="Script/script.js"></script>
+    <script src="Script/review.js"></script>
   </body>
 </html>
