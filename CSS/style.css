@@ -138,9 +138,22 @@ section {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
+#login-btn{
+  font-size: 1.7rem;
+}
+
+#user-name{
+  font-size: 1.7rem;
+}
+
 #cart-btn {
   display: none;
 }
+
 
 /*header end*/
 
