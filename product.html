@@ -32,7 +32,7 @@
       <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="product.html">Product</a>
+        <a href="product.html">Menu</a>
         <a href="Games.html">Games</a>
         <a href="review.html">Review</a>
         <a href="Music.html">Music</a>
@@ -40,10 +40,12 @@
 
       <div class="icons">
         <div id="cart-btn" class="fas fa-shopping-cart"></div>
-        <div id="login-btn" class="fas fa-user"> Login</div> <!-- Login Button -->
-        <div id="user-name" class="fas fa-user hidden"></div> <!-- User Name Display -->
+        <div id="login-btn" class="fas fa-user">Login</div>
+        <!-- Login Button -->
+        <div id="user-name" class="fas fa-user hidden"></div>
+        <!-- User Name Display -->
         <div id="menu-btn" class="fas fa-bars"></div>
-    </div>
+      </div>
     </header>
     <!--header end-->
 
@@ -53,36 +55,190 @@
 
     <div class="container">
       <header>
-        <div class="heading"><span>PRODUCT</span> LIST</div>
-        <div class="icon-cart">
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 20"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"
-            />
-          </svg>
-          <span>0</span>
-        </div>
+        <div class="heading"><span>Menu</span></div>
+        <div class="icon-cart"></div>
       </header>
-      <div class="listProduct"></div>
     </div>
-    <div class="cartTab">
-      <h1>Shopping Cart</h1>
-      <div class="listCart"></div>
-      <div class="cart-btn">
-        <button class="close">CLOSE</button>
-        <button class="checkOut">Check Out</button>
+    <div class="menu-container">
+      <div class="menu-grid">
+        <!-- Menu Item 1 -->
+        <div class="menu-item">
+          <img src="images/MenuItem1.png" alt="Signature Macarons" />
+          <h2>Signature Macarons</h2>
+          <p class="price">$59.99</p>
+          <button
+            class="info-button"
+            data-title="Signature Macarons"
+            data-description="Who wouldn't love some old-fashioned BTS themed macarons! These amazing sets of macarons are one of BTS's favourites on a cold rainy day in Seoul! Made by our fantastic and hardworking bakers, these rainbow delights are sure to solve all your cravings especially if you have a sweet tooth! And even better, it comes in a big quantity! Even better for sharing!"
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 2 -->
+        <div class="menu-item">
+          <img src="images/MenuItem2.png" alt="Dynamite Latte" />
+          <h2>Dynamite Latte</h2>
+          <p class="price">$5.99</p>
+
+          <button
+            class="info-button"
+            data-title="Dynamite Latte"
+            data-description="The dynamite latte will be sure to amaze you with it's wonderful fragrant coffee flavours as our skilled baristas use high-end coffee bean crushers! These are sure to fulfill all your caffeine needs and even better! It is complimented with the amazing latte art done by our baristas that will be sure to blow your mind like dynamite with how beautiful they are!"
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 3 -->
+        <div class="menu-item">
+          <img src="images/MenuItem3.png" alt="Rainbow Frappe" />
+          <h2>Rainbow Frappe</h2>
+          <p class="price">$9.99</p>
+
+          <button
+            class="info-button"
+            data-title="Rainbow Frappe"
+            data-description=" Inspired by the vibrant hues of a rainbow after a summer rain in Seoul, our Rainbow Frappe is a technicolor dream. Just like the eclectic and dynamic nature of BTS, this frappe swirls with an array of flavors that dance on the palate. Each sip promises a burst of joy and a tribute to the group's colorful discography, making it the perfect refresher to brighten your day."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 4 -->
+        <div class="menu-item">
+          <img src="images/MenuItem4.png" alt="BTSandwich" />
+          <h2>BTSandwich</h2>
+          <p class="price">$10.99</p>
+
+          <button
+            class="info-button"
+            data-title="BTSandwich"
+            data-description="Our BTSandwich harmonizes various ingredients as seamlessly as BTS's melodies. With layers of fresh, locally-sourced vegetables, premium cuts of meat, and a secret sauce that's as enigmatic as the members' own individual charms, this sandwich is a hit that will top your taste charts. It's a fan favorite, much like the band itself."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 5 -->
+        <div class="menu-item">
+          <img src="images/MenuItem5.png" alt="BaggueTS" />
+          <h2>BaggueTS</h2>
+          <p class="price">$10.99</p>
+
+          <button
+            class="info-button"
+            data-title="BaggueTS"
+            data-description="The BaggueTS is not just a baguette—it's a journey through the streets of Paris with a K-pop twist. Baked to golden perfection and infused with flavors that bring out the soulful and expressive notes of BTS's ballads, this bread is perfect for pairing with any of our spreads or enjoying on its own."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 6 -->
+        <div class="menu-item">
+          <img src="images/MenuItem6.png" alt="Signature Frappucino" />
+          <h2>Signature Frappucino</h2>
+          <p class="price">$9.99</p>
+
+          <button
+            class="info-button"
+            data-title="Signature Frappucino"
+            data-description="Cool down with our Signature Frappuccino, as smooth and refreshing as BTS's dance moves. This creamy concoction is a blend of top-quality coffee and milk, with a surprise pop of flavor that mirrors the group's unexpected musical twists. Topped with whipped cream and a special sparkle, it's a chart-topping treat."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 7 -->
+        <div class="menu-item">
+          <img src="images/MenuItem7.png" alt="Butter Croissant" />
+          <h2>Butter Croissant</h2>
+          <p class="price">$9.99</p>
+
+          <button
+            class="info-button"
+            data-title="Butter Croissant"
+            data-description="Embrace the flaky, buttery layers of our Butter Croissant, as comforting as BTS's music on a serene morning. Each layer is a testament to the craftsmanship of our bakers, much like the meticulous artistry of BTS's work. Ideal for a light start to your day or as a companion to your coffee, this pastry is as classic as the band's timeless hits."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 8 -->
+        <div class="menu-item">
+          <img src="images/MenuItem8.png" alt="Koya latte" />
+          <h2>Koya latte</h2>
+          <p class="price">$9.99</p>
+
+          <button
+            class="info-button"
+            data-title="Koya latte"
+            data-description="A latte dedicated to the wisdom and serenity of BTS's beloved character, Koya. The Koya Latte combines the earthy notes of our finest espresso with the soothing embrace of steamed milk. Decorated with a nap-inspired art, it’s a warm invitation to take a moment for yourself, just as Koya would."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 9 -->
+        <div class="menu-item">
+          <img src="images/MenuItem9.png" alt="Matcha Latte" />
+          <h2>Matcha Latte</h2>
+          <p class="price">$5.99</p>
+
+          <button
+            class="info-button"
+            data-title="Matcha Latte"
+            data-description="Our Matcha Latte is as soul-stirring as a BTS ballad, with the finely ground matcha whisked to create a smooth, vibrant cup that sings with traditional flavor and modern flair. It's a calming, energizing drink that resonates with the depth and artistry of BTS's music."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 10 -->
+        <div class="menu-item">
+          <img src="images/MenuItem10.png" alt="Matcha Frappe" />
+          <h2>Matcha Frappe</h2>
+          <p class="price">$9.99</p>
+
+          <button
+            class="info-button"
+            data-title="Matcha Frappe"
+            data-description="Beat the heat with the cool, refreshing Matcha Frappe, as invigorating as BTS's powerful performances. Blended with premium matcha and ice, it's a frothy, sweet delight that packs a punch, echoing the dynamic energy that BTS brings to the stage."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 11 -->
+        <div class="menu-item">
+          <img src="images/MenuItem11.png" alt="Rainbow BTS" />
+          <h2>Rainbow BTS</h2>
+          <p class="price">$45.99</p>
+
+          <button
+            class="info-button"
+            data-title="Rainbow BTS"
+            data-description="Dive into the Rainbow BTS, a dessert that’s as diverse and captivating as the band's global reach. Layer upon layer of colorful, fruit-infused jelly and soft cake pay homage to the members' unique personalities, coming together in a harmonious symphony of flavors that’s sure to be a chart-topper at any table."
+          >
+            More Info
+          </button>
+        </div>
+        <!-- Menu Item 12 -->
+        <div class="menu-item">
+          <img src="images/MenuItem12.png" alt="Cheesy Wonders" />
+          <h2>Cheesy Wonders</h2>
+          <p class="price">$6.99</p>
+
+          <button
+            class="info-button"
+            data-title="Cheesy Wonders"
+            data-description="Cheesy Wonders are the perfect snack for indulging in while jamming to BTS's upbeat tracks. Each bite is packed with a mix of gooey cheeses, enveloped in a crispy crust. These savory treats are as addictive as the group's catchy choruses and will have you reaching for more."
+          >
+            More Info
+          </button>
+        </div>
       </div>
     </div>
-
+    <!-- Modal Template -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle">Item Title</h2>
+          <p id="modalDescription">Item description goes here...</p>
+          <!-- Add more content here as needed -->
+      </div>
+    </div>
 
     <!-- footer -->
     <section class="footer">
@@ -90,8 +246,14 @@
         <div class="box">
           <h3>Addresses</h3>
           <p>333A Orchard Road, #02-22, Mandarin Gallery, Singapore 238897</p>
-          <p>78 Airport Boulevard, #02-205, Jewel Changi Airport, Singapore 819666</p>
-          <p>10 Bayfront Avenue, #B1-01, The Shoppes at Marina Bay Sands, Singapore 018956</p>
+          <p>
+            78 Airport Boulevard, #02-205, Jewel Changi Airport, Singapore
+            819666
+          </p>
+          <p>
+            10 Bayfront Avenue, #B1-01, The Shoppes at Marina Bay Sands,
+            Singapore 018956
+          </p>
           <p>15 Stamford Road, #02-22, Capitol Singapore, Singapore 178906</p>
           <p>101 Thomson Road, #01-01A, United Square, Singapore 307591</p>
           <div class="share">
@@ -140,6 +302,7 @@
     <script src="Script/scroll.js"></script>
     <script src="Script/script.js"></script>
     <script src="Script/cart.js"></script>
+    <script src="Script/menu.js"></script>
     <script src="Script/login.js"></script>
   </body>
 </html>

@@ -31,13 +31,11 @@ As a fan exploring the BTS Café online:
 - An "About" page that tells the story of how the BTS Café was inspired.
 - A "Menu" page showcasing BTS-themed drinks and food.
 - A "Gallery" to display images of the café's interior, events, and special menu items.
-- A "Merchandise" page for exclusive BTS café-themed merchandise.
-- "Events" page detailing upcoming meetups, themed events, or special promotions.
 - "Reviews" page to read and share experiences of other ARMYs.
-- Shopping cart functionality for merchandise purchases.
 - Google Maps API for locating the respective stores.
-- RestDB API to store the information of the stocks of the merchandise.
+- RestDB API to store the information of the users login.
 - Reward system for ARMYs to collect points that can be redeemed for merchandise/discounts.
+- Spotify API to showcase the different BTS songs
 
 ### Technologies Used
 - HTML
