@@ -444,7 +444,7 @@ section {
 /* banner */
 
 .banner {
-  background: url(../Images/BannerBG.webp);
+  background: url(../images/BannerBG.webp);
   background-size: cover !important;
   background-position: center !important;
   display: flex;
