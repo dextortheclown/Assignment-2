@@ -445,8 +445,8 @@ section {
 
 .banner {
   background: url('../images/BannerBG.webp');
-  background-size: cover !important;
-  background-position: center !important;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
 }
@@ -458,6 +458,7 @@ section {
   align-self: center;
   
 }
+
 
 /* banner end */
 
