@@ -49,7 +49,7 @@ function startGame() {
 function spawnTarget(lifetime) {
     const target = document.createElement('div');
     target.classList.add('target');
-    const images = ['Images/Bread.png', 'Images/CafeMug.png'];
+    const images = ['images/Bread.png', 'images/CafeMug.png'];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     target.style.backgroundImage = `url('${randomImage}')`;
 
