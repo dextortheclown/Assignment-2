@@ -1,3 +1,21 @@
+// instruction manual
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const instructionModal = document.getElementById('instructionModal');
+    instructionModal.style.display = 'block';
+
+    const closeButton = document.querySelector('.close');
+
+    closeButton.addEventListener('click', () => {
+        instructionModal.style.display = 'none';
+    });
+    window.addEventListener('click', (event) => {
+        if (event.target === instructionModal) {
+            instructionModal.style.display = 'none';
+        }
+    });
+});
+// instruction manual
 let score = 0;
 
 document.getElementById('startButton').addEventListener('click', function() {
@@ -10,8 +28,8 @@ document.getElementById('startButton').addEventListener('click', function() {
 function startGame() {
     document.getElementById('gameContainer').innerHTML = '';
     const gameDuration = 20000; // 20 seconds
-    const spawnInterval = 500; // 0.5 seconds
-    const targetLifetime = 1000; // 1 second
+    const spawnInterval = 500; // 0.5 second
+    const targetLifetime = 1000; // 1 seconds
     const spawnTimer = setInterval(function() {
         spawnTarget(targetLifetime);
     }, spawnInterval);
@@ -88,25 +106,11 @@ function sendScoreToServer(name, scoreToSend) {
         console.error('Error:', error.message);
     });
 }
-
-// back to home page button
+// back to home
 document.getElementById('BackToHome').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
-// gameshop button
+// leaderboard
 document.getElementById('Leaderboard').addEventListener('click', function() {
     window.location.href = 'Leaderboard.html';
 });
-
-var modal = document.getElementById('instructionModal');
-// close 
-var span = document.getElementsByClassName('close')[0];
-// page loads triggers thsat ting
-window.onload = function() {
-  modal.style.display = "block";
-  loadLottieAnimation();
-}
-// the X button
-span.onclick = function() {
-  modal.style.display = "none";
-}
