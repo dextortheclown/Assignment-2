@@ -138,4 +138,21 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "login.html";
         });
     }
+
+    const loginSection = document.getElementById('loginSection');
+    const signupSection = document.getElementById('signupSection');
+    const showSignupBtn = document.getElementById('showSignup');
+    const showLoginBtn = document.getElementById('showLogin');
+
+    // Toggle visibility to show signup section
+    showSignupBtn.addEventListener('click', function() {
+        loginSection.classList.add('hidden');
+        signupSection.classList.remove('hidden');
+    });
+
+    // Toggle visibility to show login section
+    showLoginBtn.addEventListener('click', function() {
+        signupSection.classList.add('hidden');
+        loginSection.classList.remove('hidden');
+    });
 });

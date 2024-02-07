@@ -10,11 +10,14 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="flex min-h-screen">
     <!-- Left side (Login) -->
-    <div class="flex flex-1 justify-center items-center p-12 bg-white">
+    <div class="flex flex-1 justify-center items-center p-12 bg-white" id="loginSection">
         <!-- Login form content -->
         <div class="w-full max-w-md">
             <h2 class="text-4xl font-bold mb-6 text-purple-700">Login to Your Account</h2>
@@ -29,12 +32,13 @@
                 </div>
                 <button type="submit" id="contact-submit" class="w-full p-3 bg-purple-500 text-white rounded-lg shadow">Sign In</button>
             </form>
+            <button id="showSignup" class="inline-block w-full p-3 mt-4 bg-gray-300 text-center text-gray-700 rounded-lg">Don't have an account? Sign Up</button>
             <a href="index.html" class="inline-block w-full p-3 mt-4 bg-gray-300 text-center text-gray-700 rounded-lg">Back to Main Page</a>
         </div>
     </div>
     
-    <!-- Right side (Signup) -->
-    <div class="flex flex-1 justify-center items-center p-12 bg-purple-600 text-white">
+    <!-- Right side (Signup) - Initially hidden -->
+    <div class="flex flex-1 justify-center items-center p-12 bg-purple-600 text-white hidden" id="signupSection">
         <!-- Signup header and form -->
         <div class="w-full max-w-md">
             <h2 class="text-4xl font-bold mb-6">New Here?</h2>
@@ -58,8 +62,10 @@
                 </div>
                 <button type="submit" id="signup-submit" class="w-full p-3 bg-white text-purple-600 rounded-lg shadow-lg">Create Account</button>
             </form>
+            <button id="showLogin" class="inline-block w-full p-3 mt-4 bg-gray-300 text-center text-gray-700 rounded-lg">Already have an account? Log In</button>
+            <a href="index.html" class="inline-block w-full p-3 mt-4 bg-gray-300 text-center text-gray-700 rounded-lg">Back to Main Page</a>
         </div>
-    </div>        
+    </div>
     <script src="Script/login.js"></script>
 </body>
 </html>
