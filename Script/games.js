@@ -9,9 +9,9 @@ document.getElementById('startButton').addEventListener('click', function() {
 
 function startGame() {
     document.getElementById('gameContainer').innerHTML = '';
-    const gameDuration = 15000; // 15 seconds
-    const spawnInterval = 1000; // 1 second
-    const targetLifetime = 2000; // 2 seconds
+    const gameDuration = 20000; // 20 seconds
+    const spawnInterval = 500; // 0.5 seconds
+    const targetLifetime = 1000; // 1 second
     const spawnTimer = setInterval(function() {
         spawnTarget(targetLifetime);
     }, spawnInterval);
@@ -19,22 +19,26 @@ function startGame() {
     setTimeout(() => {
         clearInterval(spawnTimer);
         document.getElementById('startButton').disabled = false;
-        alert(`Congratulations! You have scored ${score} points!`);
-        sendScoreToServer(score); // for sending of the score to my db
+        const playerName = prompt("Congratulations! Enter your name to save your score:");
+        if (playerName) {
+            sendScoreToServer(playerName, score);
+        } else {
+            alert(`You scored ${score} points!`);
+        }
     }, gameDuration);
 }
-// Spawn target
+
 function spawnTarget(lifetime) {
     const target = document.createElement('div');
     target.classList.add('target');
     const images = ['Images/Bread.png', 'Images/CafeMug.png'];
-    const randomImage = images[Math.floor(Math.random() * images.length)]; //  random selectio betw both images
+    const randomImage = images[Math.floor(Math.random() * images.length)];
     target.style.backgroundImage = `url('${randomImage}')`;
 
     const gameContainer = document.getElementById('gameContainer');
     const maxX = gameContainer.clientWidth - 30;
     const maxY = gameContainer.clientHeight - 30;
-    const randomX = Math.floor(Math.random() * maxX); // around the contsainer
+    const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
     target.style.left = `${randomX}px`;
@@ -48,9 +52,7 @@ function spawnTarget(lifetime) {
         scoreContainer.parentElement.style.animation = 'none';
         setTimeout(() => scoreContainer.parentElement.style.animation = 'bounce 0.3s ease', 10);
     });
-// end of spawn target
 
-//spawning of the bubbles
     gameContainer.appendChild(target);
 
     setTimeout(() => {
@@ -59,12 +61,10 @@ function spawnTarget(lifetime) {
         }
     }, lifetime);
 }
-// end of the spawning of the bubbles
 
-//send score to server
-function sendScoreToServer(scoreToSend) {
-    const apiKey = '65c04d45bdc5b284c312d24d'; // Replace with your actual API key
-    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; // Replace with your actual database URL
+function sendScoreToServer(name, scoreToSend) {
+    const apiKey = '65c04d45bdc5b284c312d24d';
+    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points';
     
     fetch(databaseURL, {
         method: 'POST',
@@ -72,7 +72,7 @@ function sendScoreToServer(scoreToSend) {
             'Content-Type': 'application/json',
             'x-apikey': apiKey
         },
-        body: JSON.stringify({ points: scoreToSend }), // Ensure that this object structure matches your database schema
+        body: JSON.stringify({ name: name, points: scoreToSend }),
     })
     .then(response => {
         if (!response.ok) {
@@ -82,56 +82,21 @@ function sendScoreToServer(scoreToSend) {
     })
     .then(data => {
         console.log('Score saved:', data);
+        alert(`Thanks, ${name}! Your score of ${scoreToSend} points has been saved!`);
     })
     .catch((error) => {
         console.error('Error:', error.message);
     });
 }
 
- // end of send score to server
-
- // retrieve score
-function retrieveScores() {
-    const apiKey = '65c04d45bdc5b284c312d24d'; 
-    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; 
-    
-    fetch(databaseURL, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'x-apikey': apiKey
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Retrieved scores:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error); //incase of errors
-    });
-}
-
-// end of retrieve
-// for data checking + sum debugging
-
 // back to home page button
 document.getElementById('BackToHome').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
 // gameshop button
-document.getElementById('GameShop').addEventListener('click', function() {
-    window.location.href = 'GameShop.html';
+document.getElementById('Leaderboard').addEventListener('click', function() {
+    window.location.href = 'Leaderboard.html';
 });
-// Lottie loading anim
-function loadLottieAnimation() {
-    lottie.loadAnimation({
-      container: document.getElementById('lottieAnimation'), // the dom element that will contain the animation
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://lottiefiles.com/download/public/66242' 
-    });
-  }
 
 var modal = document.getElementById('instructionModal');
 // close 
@@ -141,7 +106,7 @@ window.onload = function() {
   modal.style.display = "block";
   loadLottieAnimation();
 }
-// X button
+// the X button
 span.onclick = function() {
   modal.style.display = "none";
 }
