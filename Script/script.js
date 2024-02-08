@@ -48,4 +48,4 @@ backToTopBtn.addEventListener('click', function() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 });
 
-// Ensure any other functionality (like closing modal or cart) is also included here
+
