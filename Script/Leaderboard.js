@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const APIKEY = '65c04d45bdc5b284c312d24d'; // Replace with your actual API key
-    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; // Replace with your actual database URL
+    const APIKEY = '65c04d45bdc5b284c312d24d'; 
+    const databaseURL = 'https://fedassignment-bc5a.restdb.io/rest/points'; 
   
     fetch(databaseURL + '?sort=points&dir=-1', { // Sort by points in descending order
       method: 'GET',
@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => response.json())
     .then(data => {
-      // Assuming 'data' is an array of objects with 'name' and 'points' properties
+      
       const topScores = data.slice(0, 5); // Get the top 5 scores
-      const leaderboardElement = document.getElementById('leaderboard'); // This ID should be assigned to the HTML element that will contain the leaderboard
+      const leaderboardElement = document.getElementById('leaderboard'); 
   
       // Create the leaderboard HTML
       let leaderboardHTML = '<ol>';

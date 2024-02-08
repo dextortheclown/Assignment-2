@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Data submitted:", data);
         document.getElementById("add-contact-form").reset();
         getContacts();
-        // Optionally show a success message
+        // success message
         document.getElementById("add-update-msg").style.display = "block";
         setTimeout(() => {
           document.getElementById("add-update-msg").style.display = "none";
