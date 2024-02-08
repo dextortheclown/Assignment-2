@@ -1,45 +1,68 @@
-// Selecting the navigation bar and menu button elements
+// Toggle mobile menu
+let menuBtn = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .navbar');
-let menu = document.querySelector('#menu-btn');
 
-// Toggling the mobile menu
-menu.onclick = () => {
-    // Toggle the 'fa-times' class on the menu button to change the icon
-    menu.classList.toggle('fa-times');
-    // Toggle the 'active' class on the navigation bar to show/hide the mobile menu
-    navbar.classList.toggle('active');
-}
+menuBtn.addEventListener('click', function() {
+    menuBtn.classList.toggle('fa-times'); // Toggle icon change on click
+    navbar.classList.toggle('active'); // Toggle menu visibility on click
+});
 
-document.querySelector('#close-form').onclick = () =>{
-    cart.classList.remove('active');
-}
-
-/* home page carousell */
+// Initialize Swiper for the carousel
 var swiper = new Swiper(".home-slider", {
-    grabCursor:true,
-    // Enabling loop for continuous slides
-    loop:true,
-    cnteredSlides:true,
+    grabCursor: true,
+    loop: true,
+    centeredSlides: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
 });
 
-/* enlarges the images in the gallery section and allows user to scroll through */
-lightGallery(document.querySelector('.gallery .gallery-container'));
+// Initialize lightGallery for the gallery section
+lightGallery(document.querySelector('.gallery-container'), {
+    selector: '.box',
+    download: false,
+});
 
-/*scrolling to top function*/
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+// "Back to top" button functionality
+let backToTopBtn = document.getElementById('return-to-top');
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block";
     } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        backToTopBtn.style.display = "none";
     }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 100);
+}
+
+backToTopBtn.addEventListener('click', function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 });
 
+
+/* hiding header function*/
+let lastScrollTop = 0; // Keep track of the last scroll position
+
+window.onscroll = function() {
+  let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+  // Scrolling down
+  if (currentScroll > lastScrollTop && currentScroll > 50) {
+    // Add "scroll-down" class if we've scrolled more than 50px from the top
+    document.querySelector(".header").classList.add("scroll-down");
+  } else if (currentScroll < lastScrollTop && currentScroll < lastScrollTop - 10) {
+    // Remove "scroll-down" class when scrolling up
+    document.querySelector(".header").classList.remove("scroll-down");
+  }
+
+  lastScrollTop = currentScroll;
+};
