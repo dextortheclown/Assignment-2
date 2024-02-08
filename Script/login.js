@@ -44,20 +44,20 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('Login button not found');
     }
 
-    // Signup Button
+    // Sign up Button
     var signUpBtn = document.getElementById('signup-submit');
     if (signUpBtn) {
         signUpBtn.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Retrieve form data
+            // retrieve form data
             let signupForm = document.getElementById("signupForm");
             let signupName = document.getElementById("signup-name").value;
             let signupNumber = document.getElementById("signup-number").value;
             let signupEmail = document.getElementById("signup-email").value;
             let signupPassword = document.getElementById("signup-password").value;
             
-            // Prepare JSON data for the API call
+            // prepare JSON data for the API call
             let jsondata = {
                 "name": signupName,
                 "number": signupNumber,
@@ -76,8 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify(jsondata),
             };
 
-            // Make the API call to signup
-            fetch("https://assignment2-01f2.restdb.io/rest/userinfo", settings) // Ensure this is the correct endpoint
+            // make the API call to signup
+            // Ensure this is the correct endpoint
+            fetch("https://assignment2-01f2.restdb.io/rest/userinfo", settings) 
                 .then(response => {
                     if (!response.ok) throw new Error('Network response was not ok');
                     return response.json();
